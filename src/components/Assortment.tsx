@@ -76,7 +76,7 @@ export default function Assortment() {
 
       <div className="relative mt-2">
         <div ref={ref} className="flex gap-6 overflow-x-auto max-w-6xl mx-auto pb-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-          <div className="flex-shrink-0 w-12 sm:w-0" aria-hidden="true" />
+          <div className="flex-shrink-0 w-12 sm:w-0 snap-start" aria-hidden="true" />
           {ITEMS.map((item) => (
             <div key={item.title} className="flex-shrink-0 w-[calc(100vw-6rem)] sm:w-80 snap-start">
               <div className="aspect-[4/3] overflow-hidden bg-gray-100">
@@ -89,7 +89,7 @@ export default function Assortment() {
               </div>
             </div>
           ))}
-          <div className="flex-shrink-0 w-12 sm:w-0" aria-hidden="true" />
+          <div className="flex-shrink-0 w-12 sm:w-0 snap-start" aria-hidden="true" />
         </div>
       </div>
     </section>
