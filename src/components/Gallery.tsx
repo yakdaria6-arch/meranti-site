@@ -2,12 +2,12 @@ const PHOTOS = [
   "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=500&q=80",
   "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=500&q=80",
   "https://images.unsplash.com/photo-1511381939415-e44015466834?w=500&q=80",
-  "https://images.unsplash.com/photo-1548907040-4baa419e2ff2?w=500&q=80",
-  "https://images.unsplash.com/photo-1526081715791-7be6bea9b7a2?w=500&q=80",
+  "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=500&q=80",
+  "https://images.unsplash.com/photo-1614088685112-0a760b71a3c8?w=500&q=80",
   "https://images.unsplash.com/photo-1521302200778-33500795e128?w=500&q=80",
   "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=500&q=80",
-  "https://images.unsplash.com/photo-1611072965169-6ff2b7de5c8f?w=500&q=80",
-  "https://images.unsplash.com/photo-1548365328-8b849e6c7e93?w=500&q=80",
+  "https://images.unsplash.com/photo-1610450949065-1f2841536c88?w=500&q=80",
+  "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500&q=80",
   "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=500&q=80",
 ];
 

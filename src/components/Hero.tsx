@@ -9,10 +9,10 @@ type Props = {
 };
 
 const SLIDES = [
-  "https://images.unsplash.com/photo-1611072965169-6ff2b7de5c8f?w=1200&q=80",
+  "https://images.unsplash.com/photo-1610450949065-1f2841536c88?w=1200&q=80",
   "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=1200&q=80",
   "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=1200&q=80",
-  "https://images.unsplash.com/photo-1548907040-4baa419e2ff2?w=1200&q=80",
+  "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=1200&q=80",
 ];
 
 export default function Hero({ hero, company }: Props) {

@@ -12,7 +12,7 @@ const ITEMS = [
     title: "Цукаты в шоколаде",
     desc: "Апельсин в тёмном, лимон в тёмном, грейпфрут в молочном шоколаде. Единственный набор трёх цитрусов в РФ.",
     meta: "Срок — 6 мес. · хранение при 18–21°C",
-    img: "https://images.unsplash.com/photo-1611072965169-6ff2b7de5c8f?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1610450949065-1f2841536c88?w=600&q=80",
   },
   {
     title: "Линейка без сахара",
@@ -30,13 +30,13 @@ const ITEMS = [
     title: "Колотый шоколад",
     desc: "Тёмный шоколад с фундуком и сушёными ягодами — для подарка и для себя.",
     meta: "Срок — 4 мес.",
-    img: "https://images.unsplash.com/photo-1548907040-4baa419e2ff2?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=600&q=80",
   },
   {
     title: "Солёная карамель",
     desc: "Мягкая карамель ручной варки в тёмном шоколаде с крупной морской солью.",
     meta: "Срок — 45 дней",
-    img: "https://images.unsplash.com/photo-1548365328-8b849e6c7e93?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&q=80",
   },
   {
     title: "Подарочные наборы",
@@ -48,7 +48,7 @@ const ITEMS = [
     title: "Наборы детям",
     desc: "Уменьшенная порция сахара, яркая безопасная упаковка, любимые формы.",
     meta: "Срок — 60 дней",
-    img: "https://images.unsplash.com/photo-1626200924555-5896a2f16c68?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1571506165871-ee72a35bc9d4?w=600&q=80",
   },
 ];
 
