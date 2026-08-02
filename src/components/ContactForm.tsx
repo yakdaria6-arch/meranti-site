@@ -111,9 +111,11 @@ export default function ContactForm() {
                 <input
                   type="checkbox" checked={agree}
                   onChange={(e) => setAgree(e.target.checked)}
-                  className="mt-0.5"
+                  className="mt-0.5 flex-shrink-0"
                 />
-                Согласен с <a href="/privacy" className="underline">политикой конфиденциальности</a> и обработкой персональных данных (152-ФЗ)
+                <span>
+                  Согласен с <a href="/privacy" className="underline">политикой конфиденциальности</a> и обработкой персональных данных (152-ФЗ)
+                </span>
               </label>
               {agreeInvalid && <p className="text-red-500 text-xs -mt-2">Подтвердите согласие на обработку данных</p>}
               {error && <p className="text-red-500 text-sm">{error}</p>}
