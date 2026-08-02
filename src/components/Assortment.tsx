@@ -75,13 +75,13 @@ export default function Assortment() {
       </div>
 
       <div className="relative">
-        <div ref={ref} className="flex gap-4 overflow-x-auto px-4 max-w-6xl mx-auto pb-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        <div ref={ref} className="flex gap-5 overflow-x-auto px-6 sm:px-4 max-w-6xl mx-auto pb-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {ITEMS.map((item) => (
-            <div key={item.title} className="flex-shrink-0 w-[68vw] max-w-64 sm:w-80 sm:max-w-none snap-start">
+            <div key={item.title} className="flex-shrink-0 w-[calc(100vw-4.5rem)] max-w-72 sm:w-80 sm:max-w-none snap-start">
               <div className="aspect-[4/3] overflow-hidden bg-gray-100">
                 <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
               </div>
-              <div className="mt-4">
+              <div className="mt-5">
                 <h3 className="font-display text-2xl text-gray-900">{item.title}</h3>
                 <p className="text-gray-500 text-sm mt-2 leading-relaxed">{item.desc}</p>
                 <p className="text-xs uppercase tracking-widest text-gray-400 mt-3">{item.meta}</p>
@@ -89,7 +89,6 @@ export default function Assortment() {
             </div>
           ))}
         </div>
-        <div className="pointer-events-none absolute top-0 right-0 h-full w-16 bg-gradient-to-l from-white to-transparent sm:hidden" />
       </div>
     </section>
   );
