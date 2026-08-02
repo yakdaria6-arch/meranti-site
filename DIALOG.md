@@ -64,3 +64,18 @@ kutkevich.ru (премиальный шоколадный бренд), но не
 домен покупается отдельно и привязывается A-записью. Файл `content.json`
 хранится на диске сервера — правки через `/admin` не теряются между деплоями
 (в отличие от serverless-хостингов типа Vercel, где файловая система временная).
+
+## Деплой на Vercel (для демонстрации)
+
+Для быстрого показа сайта заказчику/себе выбран Vercel вместо VPS:
+
+1. Создан пустой репозиторий `yakdaria6-arch/meranti-site` на GitHub
+2. Локальный git-репозиторий подключён через `git remote add origin` и запушен
+3. В Vercel: Add New → Project → импорт репозитория `meranti-site` →
+   Next.js определился автоматически → Deploy (без переменных окружения
+   Telegram/admin — их можно добавить позже в Settings → Environment Variables)
+4. Сайт опубликован: https://meranti-site.vercel.app/
+
+Важно: пока `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `ADMIN_PASSWORD` не
+заданы в Environment Variables Vercel, форма заявки на сайте не отправляется
+и `/admin` не работает — это ожидаемо для чисто демонстрационного деплоя.
