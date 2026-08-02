@@ -1,6 +1,5 @@
 "use client";
-
-const HERO_VIDEO = "https://videos.pexels.com/video-files/3195392/3195392-hd_1920_1080_25fps.mp4";
+import { useState, useEffect } from "react";
 
 type Stat = { value: string; label: string };
 type Props = {
@@ -9,7 +8,21 @@ type Props = {
   company: { phone: string; phoneRaw: string };
 };
 
+const SLIDES = [
+  "https://images.unsplash.com/photo-1610450949065-1f2841536c88?w=1200&q=80",
+  "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=1200&q=80",
+  "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=1200&q=80",
+  "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=1200&q=80",
+];
+
 export default function Hero({ hero, company }: Props) {
+  const [slide, setSlide] = useState(0);
+
+  useEffect(() => {
+    const t = setInterval(() => setSlide((s) => (s + 1) % SLIDES.length), 4000);
+    return () => clearInterval(t);
+  }, []);
+
   const scrollToOrder = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -42,15 +55,28 @@ export default function Hero({ hero, company }: Props) {
       </div>
 
       <div className="relative w-full h-64 sm:h-80 md:h-auto md:flex-1 overflow-hidden flex-shrink-0">
-        <video
-          className="absolute inset-0 w-full h-full object-cover"
-          src={HERO_VIDEO}
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
-        <div className="absolute inset-0 bg-brand-dark/10" />
+        {SLIDES.map((url, i) => (
+          <img
+            key={url}
+            src={url}
+            alt=""
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+              i === slide ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
+        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2">
+          {SLIDES.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setSlide(i)}
+              aria-label={`Слайд ${i + 1}`}
+              className={`w-1.5 h-1.5 rounded-full transition-colors ${
+                i === slide ? "bg-brand-gold" : "bg-white/40"
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
