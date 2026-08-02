@@ -74,14 +74,14 @@ export default function Assortment() {
         </div>
       </div>
 
-      <div className="relative">
-        <div ref={ref} className="flex gap-5 overflow-x-auto px-8 sm:px-4 max-w-6xl mx-auto pb-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+      <div className="relative mt-2">
+        <div ref={ref} className="flex gap-6 overflow-x-auto px-10 sm:px-4 max-w-6xl mx-auto pb-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {ITEMS.map((item) => (
-            <div key={item.title} className="flex-shrink-0 w-[calc(100vw-4rem)] sm:w-80 snap-start">
+            <div key={item.title} className="flex-shrink-0 w-[calc(100vw-5rem)] sm:w-80 snap-start">
               <div className="aspect-[4/3] overflow-hidden bg-gray-100">
                 <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
               </div>
-              <div className="mt-5">
+              <div className="mt-6">
                 <h3 className="font-display text-2xl text-gray-900">{item.title}</h3>
                 <p className="text-gray-500 text-sm mt-2 leading-relaxed">{item.desc}</p>
                 <p className="text-xs uppercase tracking-widest text-gray-400 mt-3">{item.meta}</p>
