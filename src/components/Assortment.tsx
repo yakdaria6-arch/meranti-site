@@ -76,7 +76,7 @@ export default function Assortment() {
 
       <div ref={ref} className="flex gap-4 overflow-x-auto px-4 max-w-6xl mx-auto pb-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {ITEMS.map((item) => (
-          <div key={item.title} className="flex-shrink-0 w-64 sm:w-80 snap-start">
+          <div key={item.title} className="flex-shrink-0 w-[78vw] max-w-72 sm:w-80 sm:max-w-none snap-start">
             <div className="aspect-[4/3] overflow-hidden bg-gray-100">
               <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
             </div>
