@@ -32,7 +32,7 @@ export default function Hero({ hero, company }: Props) {
 
   return (
     <section className="relative bg-brand-dark flex flex-col md:flex-row md:min-h-screen pt-16">
-      <div className="relative flex-1 flex items-center py-12 md:py-0">
+      <div className="relative md:flex-1 flex items-center py-12 md:py-0">
         <div className="px-5 md:px-14 w-full max-w-2xl">
           <p className="text-brand-gold font-medium text-[11px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.25em] mb-5">
             {hero.badge}
@@ -54,7 +54,7 @@ export default function Hero({ hero, company }: Props) {
         </div>
       </div>
 
-      <div className="relative flex-1 h-64 sm:h-80 md:h-auto overflow-hidden">
+      <div className="relative w-full h-64 sm:h-80 md:h-auto md:flex-1 overflow-hidden flex-shrink-0">
         {SLIDES.map((url, i) => (
           <img
             key={url}
