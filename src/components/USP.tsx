@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 const ITEMS = [
   { title: "Ручная работа", desc: "Авторские коллекции, уникальные дизайны. Производим и собираем вручную." },
   { title: "100% чистый состав", desc: "Осознанный выбор подарка, никаких консервантов и усилителей вкуса." },
@@ -12,11 +14,11 @@ export default function USP() {
     <section className="py-16 bg-brand-dark">
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-px bg-white/10">
-          {ITEMS.map((item) => (
-            <div key={item.title} className="bg-brand-dark p-8">
+          {ITEMS.map((item, i) => (
+            <Reveal key={item.title} delay={i * 80} className="bg-brand-dark p-8">
               <h3 className="font-display text-2xl text-white mb-3">{item.title}</h3>
               <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

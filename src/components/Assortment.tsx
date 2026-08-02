@@ -78,13 +78,21 @@ export default function Assortment() {
         <div ref={ref} className="flex gap-6 overflow-x-auto max-w-6xl mx-auto pb-4 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           <div className="flex-shrink-0 w-12 sm:w-0 snap-start" aria-hidden="true" />
           {ITEMS.map((item) => (
-            <div key={item.title} className="flex-shrink-0 w-[calc(100vw-6rem)] sm:w-80 snap-start">
-              <div className="aspect-[4/3] overflow-hidden bg-gray-100">
-                <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
+            <div key={item.title} className="group flex-shrink-0 w-[calc(100vw-6rem)] sm:w-80 snap-start">
+              <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <p className="absolute bottom-0 left-0 right-0 p-4 text-white text-sm leading-relaxed opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                  {item.desc}
+                </p>
               </div>
               <div className="mt-6">
                 <h3 className="font-display text-2xl text-gray-900">{item.title}</h3>
-                <p className="text-gray-500 text-sm mt-2 leading-relaxed">{item.desc}</p>
+                <p className="text-gray-500 text-sm mt-2 leading-relaxed sm:group-hover:opacity-0 sm:transition-opacity sm:duration-300">{item.desc}</p>
                 <p className="text-xs uppercase tracking-widest text-gray-400 mt-3">{item.meta}</p>
               </div>
             </div>
